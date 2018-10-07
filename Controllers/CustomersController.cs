@@ -39,7 +39,11 @@ namespace RestCustomerService.Controllers
         [HttpPut("{id}")]
         public void UpdateCustomer(int id, [FromBody] Customer customer)
         {
+            var cust = cList.Find(c => (c.Id == id));
 
+            cust.FirstName = customer.FirstName;
+            cust.LastName = customer.LastName;
+            cust.Year = customer.Year;
         }
 
         // DELETE api/Customers/5
