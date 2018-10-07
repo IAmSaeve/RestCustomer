@@ -17,5 +17,10 @@ namespace RestCustomerService.Model
             Year = year;
         }
         public Customer(){}
+
+        public override string ToString()
+        {
+            return $"{nameof(Id)}: {Id}, {nameof(FirstName)}: {FirstName}, {nameof(LastName)}: {LastName}, {nameof(Year)}: {Year}";
+        }
     }
 }
