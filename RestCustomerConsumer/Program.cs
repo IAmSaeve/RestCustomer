@@ -22,11 +22,14 @@ namespace RestCustomerConsumer
             // Delete customer
             // DeleteCustomers(2);
 
+            // Put customer
+            PutCustomersAsync(2, new Customer(2, "G", "R", 1852));
+
             // Get list of customers
-            foreach (var c in GetCustomersAsync().Result)
-            {
-                System.Console.WriteLine(c);
-            }
+            // foreach (var c in GetCustomersAsync().Result)
+            // {
+            //     System.Console.WriteLine(c);
+            // }
         }
 
         public static async Task<IList<Customer>> GetCustomersAsync()
@@ -70,13 +73,13 @@ namespace RestCustomerConsumer
         }
 
         
-        public static async void PutCustomersAsync(Customer cust)
+        public static void PutCustomersAsync(int id, Customer cust)
         {
             using (HttpClient client = new HttpClient())
             {
                 var jsonString = JsonConvert.SerializeObject(cust);
                 StringContent content = new StringContent(jsonString, Encoding.UTF8, "application/json");
-                var response = await client.PostAsync(CustomersUri, content);
+                var response = client.PutAsync(CustomersUri + "/" + id, content).Result;
                 if (response.IsSuccessStatusCode)
                 {
                     Console.Write("Success");
