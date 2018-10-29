@@ -1,6 +1,8 @@
 .vscode
 .directory
 
+compiledService/
+
 # Build results
 [Dd]ebug/
 [Dd]ebugPublic/
