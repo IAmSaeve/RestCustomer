@@ -28,6 +28,13 @@ namespace RestCustomerService.Controllers
             return cList;
         }
 
+        // GET: api/Customers/1
+        [HttpGet("{id}")]
+        public Customer Get(int id)
+        {
+            return cList.Find(c => (c.Id == id));
+        }
+
         // POST api/Customers
         [HttpPost]
         public void InsertCustomer(Customer customer)
