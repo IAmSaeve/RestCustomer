@@ -5,6 +5,8 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 using SQLRestCustomerService.Model;
+using MySqlConnector;
+using MySql.Data;
 
 namespace SQLRestCustomerService.Controllers
 {
@@ -18,14 +20,14 @@ namespace SQLRestCustomerService.Controllers
         [HttpGet]
         public List<Customer> Get()
         {
-            
+            return null;
         }
 
         // GET: api/Customers/1
         [HttpGet("{id}")]
         public Customer Get(int id)
         {
-            
+            return null;
         }
 
         // POST api/Customers
