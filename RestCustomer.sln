@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestCustomerConsumer", "Res
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestCustomerService", "RestCustomerService\RestCustomerService.csproj", "{437D2FF5-A6D6-4E46-8C24-E846AC268B1D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQLRestCustomerService", "SQLRestCustomerService\SQLRestCustomerService.csproj", "{C3C67420-4197-4144-8D47-894432D2380C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,5 +46,17 @@ Global
 		{437D2FF5-A6D6-4E46-8C24-E846AC268B1D}.Release|x64.Build.0 = Release|Any CPU
 		{437D2FF5-A6D6-4E46-8C24-E846AC268B1D}.Release|x86.ActiveCfg = Release|Any CPU
 		{437D2FF5-A6D6-4E46-8C24-E846AC268B1D}.Release|x86.Build.0 = Release|Any CPU
+		{C3C67420-4197-4144-8D47-894432D2380C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3C67420-4197-4144-8D47-894432D2380C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3C67420-4197-4144-8D47-894432D2380C}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{C3C67420-4197-4144-8D47-894432D2380C}.Debug|x64.Build.0 = Debug|Any CPU
+		{C3C67420-4197-4144-8D47-894432D2380C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{C3C67420-4197-4144-8D47-894432D2380C}.Debug|x86.Build.0 = Debug|Any CPU
+		{C3C67420-4197-4144-8D47-894432D2380C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3C67420-4197-4144-8D47-894432D2380C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3C67420-4197-4144-8D47-894432D2380C}.Release|x64.ActiveCfg = Release|Any CPU
+		{C3C67420-4197-4144-8D47-894432D2380C}.Release|x64.Build.0 = Release|Any CPU
+		{C3C67420-4197-4144-8D47-894432D2380C}.Release|x86.ActiveCfg = Release|Any CPU
+		{C3C67420-4197-4144-8D47-894432D2380C}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

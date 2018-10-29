@@ -1,6 +1,6 @@
 using System;
 
-namespace RestCustomerService.Model
+namespace SQLRestCustomerService.Model
 {
     public class Customer
     {
