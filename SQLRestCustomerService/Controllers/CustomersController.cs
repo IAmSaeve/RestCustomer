@@ -14,7 +14,7 @@ namespace SQLRestCustomerService.Controllers
     [ApiController]
     public class CustomersController : ControllerBase
     {
-        private const string connection = "server=192.168.122.46; uid=root; pwd=password; database=CustomerDB";
+        private const string connection = "server=192.168.122.105; uid=root; pwd=password; database=CustomerDB";
         
         // GET: api/Customers
         [HttpGet]
@@ -35,6 +35,7 @@ namespace SQLRestCustomerService.Controllers
                     result.Add(new Customer(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetInt32(3)));
                 }
             }
+            db.Dispose();
             return result;
         }
 
@@ -57,6 +58,7 @@ namespace SQLRestCustomerService.Controllers
                     result = new Customer(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetInt32(3));
                 }
             }
+            db.Dispose();
             return result;
         }
 
@@ -71,6 +73,7 @@ namespace SQLRestCustomerService.Controllers
 
             var command = new MySqlCommand(sql, db);
             var reader = command.ExecuteReader();
+            db.Dispose();
         }
 
         // PUT api/Customers/5
@@ -84,6 +87,7 @@ namespace SQLRestCustomerService.Controllers
 
             var command = new MySqlCommand(sql, db);
             var reader = command.ExecuteReader();
+            db.Dispose();
         }
 
         // DELETE api/Customers/5
@@ -96,6 +100,7 @@ namespace SQLRestCustomerService.Controllers
 
             var command = new MySqlCommand(sql, db);
             var reader = command.ExecuteReader();
+            db.Dispose();
         }
     }
 }
